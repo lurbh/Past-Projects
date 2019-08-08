@@ -1,0 +1,204 @@
+<html>
+<script>
+  function TimesTable() 
+  {
+    var list1 = document.getElementById('mul1');
+    var list2 = document.getElementById('mul2');
+    list1.innerHTML = "";
+    list2.innerHTML = "";
+    var num = document.getElementById('number').value;
+    if(num < 10 && num > 0)
+      for (var i = 1; i < 10; i++) 
+      {
+        var entry1 = document.createElement('li');
+        var entry2 = document.createElement('li');
+        var mul = num * i;
+        var line = num + " x " + i + " = " + mul;
+        entry1.appendChild(document.createTextNode(line));
+        entry2.appendChild(document.createTextNode(line));
+        list1.appendChild(entry1);
+        list2.appendChild(entry2);
+      }
+    else
+      window.alert("Number Entered not between 1-9");
+  }
+
+  var alertsch;
+  var SCORE;
+
+  function StartGame()
+  {
+    var num = prompt("Enter an integer between 0 and 9")
+    if(num < 10 && num >= 0)
+    {
+      var chosennum = document.getElementById('Cnum');
+      chosennum.innerHTML = num;
+      SCORE = 0;
+      alertsch = setInterval(Gamefunction,1000);
+      var score = document.getElementById('Score');
+      score.innerHTML = SCORE;
+      var num1 = document.getElementById('num1');
+      var num2 = document.getElementById('num2');
+      var num3 = document.getElementById('num3');
+      num1.innerHTML = Math.floor(Math.random() * 10);
+      num2.innerHTML = Math.floor(Math.random() * 10);
+      num3.innerHTML = Math.floor(Math.random() * 10);
+    }
+    else
+      window.alert("Number Entered not between 0-9");
+  }
+
+  function Gamefunction()
+  {
+    var score = document.getElementById('Score');
+    score.innerHTML = SCORE;
+    var num1 = document.getElementById('num1');
+    var num2 = document.getElementById('num2');
+    var num3 = document.getElementById('num3');
+    num1.innerHTML = Math.floor(Math.random() * 10);
+    num2.innerHTML = Math.floor(Math.random() * 10);
+    num3.innerHTML = Math.floor(Math.random() * 10);
+  }
+
+  function StopGame()
+  {
+    clearInterval(alertsch);
+  }
+
+  function Checkno1()
+  {
+    var num = document.getElementById('Cnum').innerHTML;
+    var num1 = document.getElementById('num1').innerHTML;
+    if(num1 == num)
+      SCORE++;
+    else
+      SCORE--;
+    var score = document.getElementById('Score');
+    score.innerHTML = SCORE;
+  }
+
+  function Checkno2()
+  {
+    var num = document.getElementById('Cnum').innerHTML;
+    var num2 = document.getElementById('num2').innerHTML;
+    if(num2 == num)
+      SCORE++;
+    else
+      SCORE--;
+    var score = document.getElementById('Score');
+    score.innerHTML = SCORE;
+  }
+
+  function Checkno3()
+  {
+    var num = document.getElementById('Cnum').innerHTML;
+    var num3 = document.getElementById('num3').innerHTML;
+    if(num3 == num)
+      SCORE++;
+    else
+      SCORE--;
+    var score = document.getElementById('Score');
+    score.innerHTML = SCORE;
+  }
+
+</script>
+<style>
+  
+</style>
+<head>
+  <title>Assignment 6 Solution</title>
+</head>
+<body>
+  <h1><b>Assignment 6 Solutuion</b></h1>
+  <hr />
+  <b>I have read the policy for plagiarism at Wollongong University.</b> <br />
+  <b>I declare that this assignment solution is enirely my work.</b> <br />
+  <hr />
+
+  <h1><b>Part 1</b></h1>
+  <table border="2" width="50%">
+    <tr>
+      <td colspan="2"><b>STUDENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT NUMBER</td>
+        <td>6212748</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT FAMILY NAME</td>
+        <td>LUR</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT GIVEN NAME</td>
+        <td>BING HUII</td>
+    </tr>
+    <tr>
+      <td width="30%">UOW EMAIL</td>
+        <td>bhl736@uowmail.edu.au</td>
+    </tr>
+    <tr>
+      <td colspan="2"><b>ASSIGNMENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT CODE</td>
+        <td>CSIT128</td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT NAME</td>
+        <td>Introduction to Web Technology</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT NUMBER</td>
+        <td>6</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT DUE DATE</td>
+        <td>12/02/2019</td>
+    </tr>
+    <tr>
+      <td width="30%">LAB TIME</td>
+        <td>08:30</td>
+    </tr>
+  </table>
+  <hr />
+  <h1><b>Part 2: Times Table</b> </h1>
+  Enter an integer from 1 to 9: 
+  <input type="text" id="number" size="30">
+  <button onclick="TimesTable()">Generate times table</button>
+  <table border="0">
+    <tr>
+      <td width="300px">
+        <ul style="list-style-type:none;" id="mul1">
+        </ul>
+      </td>
+      <td>
+        <ul style="list-style-type:disc;" id="mul2">
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <hr />
+  <h1><b>Part 3: Game</b> </h1>
+  <button onclick="StartGame()">Start Game</button>
+  <button onclick="StopGame()">Stop Game</button>
+  <table border="0">
+    <br />
+    <br />
+    <tr>
+      <td>Your chosen number is: <font size="4" color="green" id="Cnum"></font></td>
+    </tr>
+    <tr>
+      <td>Your score so far: <font size="4" color="red" id="Score"></font></td>
+    </tr>
+  </table>
+  <table border="0">
+    <tr>
+      <td width="100px"><font size="25" color="red" id="num1" onclick="Checkno1()"></font></td>
+      <td width="100px"><font size="25" color="orange" id="num2" onclick="Checkno2()"></font></td>
+      <td width="100px"><font size="25" color="blue" id="num3" onclick="Checkno3()"></font></td>
+    </tr>
+  </table>
+  <hr />
+  &copy; Lur Bing Huii
+</body>
+</html>

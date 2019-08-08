@@ -1,0 +1,259 @@
+<html>
+<style>
+  #table1{
+  border:0px solid transparent;
+  border-collapse: collapse;
+  padding: 5px;
+  color: black; 
+}
+#form1 {
+  background-color: black;
+  color: white;
+  width: 500;
+  height: 150;
+  text-align: center;
+}
+#youtubesearch{
+  background-color: red;
+  color: white;
+  font-weight: bold
+}
+#form2 {
+  background-color: white;
+  color: black;
+  width: 550;
+}
+#worldscientificsearch{
+  background-color: #00004d;
+  color: white;
+  font-weight: bold
+}
+#form3 {
+  background-color: #66a3ff;
+  color: black;
+  width: 500;
+  height: 250;
+  text-align: center;
+}
+#redditsearch{
+  background-color: #000099;
+  color: white;
+  font-weight: bold
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<head>
+  <title>Assignment 3 Solution</title>
+</head>
+<body>
+  <h1><b>Assignment 3 Solutuion</b></h1>
+  <hr />
+  <b>I have read the policy for plagiarism at Wollongong University.</b> <br />
+  <b>I declare that this assignment solution is enirely my work.</b> <br />
+  <hr />
+
+  <h1><b>Part 1</b></h1>
+  <table border="2" width="50%">
+    <tr>
+      <td colspan="2"><b>STUDENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT NUMBER</td>
+        <td>6212748</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT FAMILY NAME</td>
+        <td>LUR</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT GIVEN NAME</td>
+        <td>BING HUII</td>
+    </tr>
+    <tr>
+      <td width="30%">UOW EMAIL</td>
+        <td>bhl736@uowmail.edu.au</td>
+    </tr>
+    <tr>
+      <td colspan="2"><b>ASSIGNMENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT CODE</td>
+        <td>CSIT128</td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT NAME</td>
+        <td>Introduction to Web Technology</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT NUMBER</td>
+        <td>3</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT DUE DATE</td>
+        <td>29/01/2019</td>
+    </tr>
+    <tr>
+      <td width="30%">LAB TIME</td>
+        <td>08:30</td>
+    </tr>
+  </table>
+  <hr />
+  <h1><b>Part 2: Youtube search service</b> </h1>
+  <form action="http://www.youtube.com/results" method="get" id="form1">
+    <img src="youtube-logo.png" width="150" alt="Youtube">
+    <input name="search_query" type="text" maxlength="128" size="50" />
+    </select>
+    <input type="submit" value="Search" id="youtubesearch" />
+  </form>
+  <hr />
+  <h1><b>Part 3: World Scientific search service</b> </h1>
+  <form action="https://www.worldscientific.com/action/doSearch" method="get" id="form2">
+    <img src="https://www.worldscientific.com/pb-assets/releasedAssets/images/WSPC-LOGO-250-1541381839657.png" alt="worldscientific">
+    <table border="2" width="40%" cellpadding="0" cellspacing="0" border="0" id="table1">
+      <tr>
+        <td width="15%" id="table1">
+        <select name="field1">
+          <option value="AllField">Anywhere</option>
+          <option value="Title">Title</option>
+          <option value="Contrib">Author</option>
+          <option value="Keyword">Keywords</option>
+          <option value="Abstract">Abstract</option>
+        </select>
+        </td>
+        <td id="table1"><input name="text1" type="text" maxlength="128" size="50" /></td>
+      </tr>
+       <tr>
+        <td width="15%" id="table1">Published in</td>
+        <td id="table1"><input name="publication" type="text" maxlength="128" size="50" /></td>
+      </tr>
+       <tr>
+        <td width="15%" id="table1">Publication Date</td>
+        <td id="table1"><input type="radio" name="Ppub" value="">All Dates</td>
+      </tr>
+      <tr>
+        <td width="15%" id="table1"></td>
+        <td id="table1">
+          <input type="radio" name="Datetype" value="Ppub">Last
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <select name="">
+            <option value="">Select</option>
+            <option value="">Month</option>
+            <option value="">6 Months</option>
+            <option value="">Year</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <div>
+        <td width="15%" id="table1"></td>
+        <td id="table1"><input type="radio" name="" value="">Custom Range&nbsp;
+        <select name="AfterMonth">
+          <option value="">Month</option>
+          <option value="1">Jan</option>
+          <option value="2">Feb</option>
+          <option value="3">Mar</option>
+          <option value="4">Apr</option>
+          <option value="5">May</option>
+          <option value="6">Jun</option>
+          <option value="7">Jul</option>
+          <option value="8">Aug</option>
+          <option value="9">Sep</option>
+          <option value="10">Oct</option>
+          <option value="11">Nov</option>
+          <option value="12">Dec</option>
+        </select>
+        <select name="AfterYear">
+          <option value="">Year</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+          <option value="2008">2008</option>
+          <option value="2007">2007</option>
+          <option value="2006">2006</option>
+          <option value="2005">2005</option>
+          <option value="2004">2004</option>
+          <option value="2003">2003</option>
+          <option value="2002">2002</option>
+          <option value="2001">2001</option>
+          <option value="2000">2000</option>
+        </select>
+        <select name="BeforeMonth">
+          <option value="">Month</option>
+          <option value="1">Jan</option>
+          <option value="2">Feb</option>
+          <option value="3">Mar</option>
+          <option value="4">Apr</option>
+          <option value="5">May</option>
+          <option value="6">Jun</option>
+          <option value="7">Jul</option>
+          <option value="8">Aug</option>
+          <option value="9">Sep</option>
+          <option value="10">Oct</option>
+          <option value="11">Nov</option>
+          <option value="12">Dec</option>
+        </select>
+        <select name="BeforeYear">
+          <option value="">Year</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+          <option value="2008">2008</option>
+          <option value="2007">2007</option>
+          <option value="2006">2006</option>
+          <option value="2005">2005</option>
+          <option value="2004">2004</option>
+          <option value="2003">2003</option>
+          <option value="2002">2002</option>
+          <option value="2001">2001</option>
+          <option value="2000">2000</option>
+        </select>
+        </div>
+      </tr>
+    </table>
+    <br />
+    <input type="checkbox" name="earlycite" value="on"> include Articles in Ahead of Print
+    <br />
+    <br />
+    <input type="submit" value="Search" id="worldscientificsearch" style="float: right;"/>
+    <div style="clear: both;"></div>
+  </form>
+  <hr />
+  <h1><b>Part 4: Reddit search service</b> </h1>
+  <form action="https:///www.reddit.com/search" method="get" id="form3">
+    <p>
+    Reddit is a massive collection of forums, where people can share news and content or comment on other people’s posts. It's broken up to many “subreddits”, each covering a different topic. This form interacts with the website to help you serch for these “subreddits” or any post relating to the keyword you have keyed in to explore the vast collection it has to offer.
+    </p>
+    <br />
+    <img src="reddit-logo.png" width="150" alt="reddit">
+    <br />
+    <input name="q" type="text" maxlength="128" size="50" />
+    </select>
+    <input type="submit" value="Search" id="redditsearch" />
+  </form>
+  <hr />
+  &copy; Lur Bing Huii
+</body>
+</html>
