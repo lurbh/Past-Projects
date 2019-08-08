@@ -1,0 +1,264 @@
+<html>
+<head>
+<style> 
+#form1 {
+  background-color: #98AFC7;
+  color: black;
+  width: 400;
+  height: 575;
+  line-height: 2;
+  font-family: Arial;
+  font-size: 14px;
+  float:left
+}
+#form2 {
+  background-color: #151B54;
+  color: white;
+  width: 400;
+  height: 575;
+  text-align: center;
+  line-height: 2;
+  font-family: Arial;
+  font-size: 14px;
+  float:left
+}
+#rcorners1 {
+  border-radius: 10px;
+  height: 35;
+}
+#rcorners2 {
+  border-radius: 5px;
+}
+#rcorners3 {
+  border-radius: 10px;
+  height: 105;
+}
+#hr1 {
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:black;
+  color:black;
+  border: 0 none;
+}
+#hr2 {
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:black;
+  color:black;
+  border: 0 none;
+}
+#td1 {
+  padding: 10px;
+  text-align: left;
+}
+#table1{
+  border:0px solid transparent;
+  border-collapse: collapse;
+}
+#form3 {
+  width: 400;
+  height: 375;
+  line-height: 2;
+  font-family: Arial;
+  font-size: 14px;
+  text-align: left;
+  float:left
+}
+#BuyNow {
+  background-color: #40E0D0;
+  color: white;
+  line-height: 2;
+  font-family: Arial;
+  font-size: 14px;
+  width: 175;
+  height: 30;
+  text-align: center;
+  border-radius: 10px;
+}
+#br1{
+  line-height: 0;
+}
+pre {
+  font-family: Arial;
+}
+</style>
+  <title>Assignment 2 Solution</title>
+</head>
+<body>
+  <h1><b>Assignment 2 Solutuion</b></h1>
+  <hr />
+  <b>I have read the policy for plagiarism at Wollongong University.</b> <br />
+  <b>I declare that this assignment solution is enirely my work.</b> <br />
+  <hr />
+
+  <h1><b>Part 1</b></h1>
+  <table border="2" width="50%">
+    <tr>
+      <td colspan="2"><b>STUDENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT NUMBER</td>
+        <td>6212748</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT FAMILY NAME</td>
+        <td>LUR</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT GIVEN NAME</td>
+        <td>BING HUII</td>
+    </tr>
+    <tr>
+      <td width="30%">UOW EMAIL</td>
+        <td>bhl736@uowmail.edu.au</td>
+    </tr>
+    <tr>
+      <td colspan="2"><b>ASSIGNMENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT CODE</td>
+        <td>CSIT128</td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT NAME</td>
+        <td>Introduction to Web Technology</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT NUMBER</td>
+        <td>2</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT DUE DATE</td>
+        <td>15/01/2019</td>
+    </tr>
+    <tr>
+      <td width="30%">LAB TIME</td>
+        <td>12:00</td>
+    </tr>
+  </table>
+  <hr />
+  <h1><b>Part 2: form 1</b> </h1>
+  <div>
+  <form id="form1">
+    <h3 style="text-align:center;"><b>Choose Advance Search Options</b></h3>
+    <input type="checkbox" name="searchoption1" value="MSR"><b>Multi-Subject Resources</b><br />
+    <input type="checkbox" name="searchoption2" value="DnT"><b>Dissertations and Theses</b><br />
+    <input type="checkbox" name="searchoption3" value="CNS"><b>Current News Sources</b><br />
+    <input type="checkbox" name="searchoption4" value="BKS"><b>Books</b><br />
+    <input type="checkbox" name="searchoption5" value="AnH"><b>Arts & Humanities Articles</b><br />
+    <input type="checkbox" name="searchoption6" value="BUS"><b>Business Articles</b><br />
+    <input type="checkbox" name="searchoption7" value="EDU"><b>Education Articles</b><br />
+    <input type="checkbox" name="searchoption8" value="ENG"><b>Engineering Articels</b><br />
+    <input type="checkbox" name="searchoption9" value="HSA"><b>International and Area Studies</b><br />
+    <input type="checkbox" name="searchoption10" value="LSA"><b>Life Sciences Articles</b><br />
+    <input type="checkbox" name="searchoption11" value="LIS"><b>Library & Infomation Science Articles</b><br />
+    <input type="checkbox" name="searchoption12" value="MPA"><b>Music / Performing Arts</b><br />
+    <input type="checkbox" name="searchoption13" value="PSM"><b>Physical Science / Math Articles</b><br />
+    <input type="checkbox" name="searchoption14" value="SSA"><b>Social Science Articles</b><br />
+    <input type="checkbox" name="searchoption15" value="WSE"><b>Web Search Engines</b><br />
+    <input type="checkbox" name="searchoption16" value="DIC"><b>Dictionaries, Encyclopedias, etc.</b><br />
+    <input type="checkbox" name="searchoption17" value="IMG"><b>Image Search</b><br />
+    <input type="checkbox" name="searchoption18" value="DAT"><b>Datasets</b><br />
+</form>
+<form id="form2">
+  <h3><b>Enter Advance Search Terms</b></h3>
+  <b>Keywords:</b><br />
+  <input type="text" name="keyword" size="47" id="rcorners1"><br />
+  <br />
+  <b>Title Words:</b><br />
+  <input type="text" name="twords" size="47" id="rcorners1"><br />
+  <br />
+  <b>Author's Name:</b><br />
+  <div = style="line-height: 0.5; font-style: Arial;">
+    <pre style="text-align: left">      Last Name                     First Name                     Initial</pre>
+    <input type="text" name="lname" size="15" id="rcorners1">&nbsp;&nbsp;
+    <input type="text" name="fname" size="15" id="rcorners1">&nbsp;&nbsp;
+    <input type="text" name="Initial" size="5" id="rcorners1">
+  </div>
+  <br />
+  <button type="button" id="rcorners2">Perform Search</button>
+</form>
+</div>
+<hr style="clear: left;"/>
+<h1 ><b>Part 3: form 2</b> </h1>
+<hr id="hr1">
+<h3><b>Select the type of Gift Card</b></h3>
+<hr />
+  <table border="2" width="50%" cellpadding="0" cellspacing="0" border="0" id="table1">
+    <tr>
+      <td width="50%" id="table1"><input type="radio" name="giftcardtype" value="physical"><b>Physical Gift Card</b></td>
+        <td id="table1"><input type="radio" name="giftcardtype" value="digital"><b>Digital Gift Card</b></td>
+    </tr>
+    <tr>
+      <td width="50%" id="td1" id="table1">A Traditional gift card that is personalised and delivered to the recipient's doorstep. It can be used both online and in-store.</td>
+        <td id="td1" id="table1">Digital Cards are sent by email within minutes and can be redeemed both in stores and online</td>
+    </tr>
+  </table>
+<hr id="hr2">
+<h3><b>Personalise your Gift card</b></h3>
+<hr />
+Gift Card Value 
+<input type="text" name="GCV" size="5" id="rcorners2">
+e.g.,100
+<hr />
+<div>
+  <form id="form3">
+    <pre>Name     <input type="text" name="name" size="32" id="rcorners2"><br /></pre>
+    <pre>To Email <input type="text" name="email" size="32" id="rcorners2"><br /></pre>
+    <b>Postal Address</b><br />
+    <input type="text" name="address" size="40" id="rcorners3"><br />
+    <b>Custom Greeting</b><br />
+    <input type="text" name="greeting" size="40" id="rcorners3"><br />
+  </form>
+  <form id="form3">
+    <b style="font-size: 20px">Payment</b><br />
+    Card Type<br />
+    <select name="ctype">
+      <option value="visa">Visa</option>
+      <option value="MC">Mastercard</option>
+      <option value="AE">American Express</option>
+    </select><br />
+    Card Number<br />
+    <input type="text" name="cardno" size="30" id="rcorners2"><br />
+    Valid to<br />
+    <select name="month">
+      <option value="1">01</option>
+      <option value="2">02</option>
+      <option value="3">03</option>
+      <option value="4">04</option>
+      <option value="5">05</option>
+      <option value="6">06</option>
+      <option value="7">07</option>
+      <option value="8">08</option>
+      <option value="9">09</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>/
+    <select name="year">
+      <option value="17">2017</option>
+      <option value="18">2018</option>
+      <option value="19">2019</option>
+      <option value="20">2020</option>
+      <option value="21">2021</option>
+      <option value="22">2022</option>
+      <option value="23">2023</option>
+      <option value="24">2024</option>
+      <option value="25">2025</option>
+    </select><br id="br1" />
+    mm/yyyy<br />
+    Name on card<br />
+    <input type="text" name="cardname" size="30" id="rcorners2"><br />
+    CVV2 Number<br />
+    <input type="text" name="CVV2" size="13" id="rcorners2"><br />
+    <hr style="height:pt5; visibility:hidden;" />
+    <button type="button" id="BuyNow">Buy Now</button>
+  </form>
+</div>
+<hr style="clear: left;"/>
+<hr id="hr1">
+  &copy; Lur Bing Huii
+</body>
+</html>

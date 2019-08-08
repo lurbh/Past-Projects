@@ -1,0 +1,214 @@
+<html>
+<head>
+  <title>Assignment 5 Solution</title>
+</head>
+<script>
+  function changesquare()
+  {
+    //window.alert("Name must start with an alphabet.");
+    var shape = document.getElementById("shapeimg");
+    var desc = document.getElementById("shapeid");
+    if (shape.getAttribute('src') == "A5 Resources/square.png")
+    {
+      shape.src = "A5 Resources/square.png";
+      desc.innerHTML = "Square";
+    }
+    else
+    {
+      shape.src = "A5 Resources/square.png";
+      desc.innerHTML = "Square";
+    }
+  }
+
+  function changecircle()
+  {
+    //window.alert("Name must start with an alphabet.");
+    var shape = document.getElementById("shapeimg");
+    var desc = document.getElementById("shapeid");
+    if (shape.getAttribute('src') == "A5 Resources/circle.png")
+    {
+      shape.src = "A5 Resources/circle.png";
+      desc.innerHTML = "Circle";
+    }
+    else
+    {
+      shape.src = "A5 Resources/circle.png";
+      desc.innerHTML = "Circle";
+    }
+  }
+
+  function changetriangle()
+  {
+    //window.alert("Name must start with an alphabet.");
+    var shape = document.getElementById("shapeimg");
+    var desc = document.getElementById("shapeid");
+    if (shape.getAttribute('src') == "A5 Resources/triangle.png")
+    {
+      shape.src = "A5 Resources/triangle.png";
+      desc.innerHTML = "Triangle";
+    }
+    else
+    {
+      shape.src = "A5 Resources/triangle.png";
+      desc.innerHTML = "Triangle";
+    }
+  }
+
+  function startbtn()
+  {
+    document.getElementById("div2").innerHTML = "";
+    var name = prompt("Enter User Name:")
+    document.getElementById("div1").innerHTML = name;
+  }
+
+  function clearbtn()
+  {
+    document.getElementById("div1").innerHTML = "";
+    document.getElementById("div2").innerHTML = "";
+  }
+
+  function leftarr()
+  {
+    var d1 = document.getElementById("div1");
+    var d2 = document.getElementById("div2");
+    if(d1.innerHTML == "")
+    {
+      d1.innerHTML = d2.innerHTML;
+      d2.innerHTML = "";
+    }
+  }
+
+  function rightarr()
+  {
+    var d1 = document.getElementById("div1");
+    var d2 = document.getElementById("div2");
+    if(d2.innerHTML == "")
+    {
+      d2.innerHTML = d1.innerHTML;
+      d1.innerHTML = "";
+    }
+  }
+
+</script>
+<style>
+  #div1{
+  background-color: black;
+  width: 175px;
+  height: 100px;
+  border: 5px black;
+  padding: 25px;
+  margin: 25px;
+  color: white;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+  }
+
+  #div2{
+  background-color: grey;
+  width: 175px;
+  height: 100px;
+  border: 5px black;
+  padding: 25px;
+  margin: 25px;
+  color: white;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+  }
+
+  #table1{
+  border:0px solid transparent;
+  border-collapse: collapse;
+  padding: 0px;
+  color: black; 
+  }
+</style>
+<body>
+  <h1><b>Assignment 5 Solutuion</b></h1>
+  <hr />
+  <b>I have read the policy for plagiarism at Wollongong University.</b> <br />
+  <b>I declare that this assignment solution is enirely my work.</b> <br />
+  <hr />
+
+  <h1><b>Part 1</b></h1>
+  <table border="2" width="50%">
+    <tr>
+      <td colspan="2"><b>STUDENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT NUMBER</td>
+        <td>6212748</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT FAMILY NAME</td>
+        <td>LUR</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT GIVEN NAME</td>
+        <td>BING HUII</td>
+    </tr>
+    <tr>
+      <td width="30%">UOW EMAIL</td>
+        <td>bhl736@uowmail.edu.au</td>
+    </tr>
+    <tr>
+      <td colspan="2"><b>ASSIGNMENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT CODE</td>
+        <td>CSIT128</td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT NAME</td>
+        <td>Introduction to Web Technology</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT NUMBER</td>
+        <td>5</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT DUE DATE</td>
+        <td>12/02/2019</td>
+    </tr>
+    <tr>
+      <td width="30%">LAB TIME</td>
+        <td>08:30</td>
+    </tr>
+  </table>
+  <hr />
+  <h1>Part 2: Shapes</h1>
+  <button onclick="changesquare()">Square</button>
+  <button onclick="changecircle()">Circle</button>
+  <button onclick="changetriangle()">Triangle</button>
+  <br />
+  <img id="shapeimg" width="200">
+  <br />
+  <div  style="text-align: center; max-width:200;" >
+  <span id="shapeid"></span>
+  </div>
+  <hr />
+  <h1>Part 3: Name Box</h1>
+  <button onclick="startbtn()">Start</button>
+  <button onclick="clearbtn()">Clear</button>
+  <table border="1" width="625px" id="table1">
+    <tr>
+      <td width=" 100px">
+        <div id="div1"></div>
+      </td>
+      <td width=" 31px">
+        <button onclick="rightarr()">--></button>
+        <br><br><br>
+        <button onclick="leftarr()"><--</button>
+      </td>
+      <td width=" 100px">
+        <div id="div2"></div>
+      </td>
+    </tr>
+  </table>
+  <hr style="clear: left;"/>
+  &copy; Lur Bing Huii
+</body>
+</html>

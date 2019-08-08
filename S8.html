@@ -1,0 +1,210 @@
+<html>
+<head>
+  <title>Assignment 8 Solution</title>
+</head>
+<style>
+  .day{
+    color: blue; 
+  }
+
+  .overall{
+    font-style: italic;
+  }
+
+  .hightemp{
+    font-size: 25px;
+  }
+
+  .lowtemp{
+    font-size: 15px;
+  }
+</style>
+<script>
+  function getForecast1()
+  {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() 
+    {
+      if (xhttp.readyState == 4 && xhttp.status == 200) 
+      {
+        processForecast1(xhttp);
+      }
+    };
+    xhttp.open("GET", "S8.xml", true);
+    xhttp.send();
+  }
+
+  function getForecast2()
+  {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() 
+    {
+      if (xhttp.readyState == 4 && xhttp.status == 200) 
+      {
+        processForecast2(xhttp);
+      }
+    };
+    xhttp.open("GET", "S8.xml", true);
+    xhttp.send();
+  }
+  
+  function processForecast1(xhttp)
+  {
+    var xml = xhttp.responseXML;
+    var itemArray = parseXML(xml);
+    displayForecast1(itemArray);
+  }
+
+  function processForecast2(xhttp)
+  {
+    var xml = xhttp.responseXML;
+    var itemArray = parseXML(xml);
+    displayForecast2(itemArray);
+  }
+  
+  function parseXML(xml)
+  {
+    var itemArray = {};
+    var forecastElement = xml.getElementsByTagName("forecast")[0];
+    itemArray.queryTime = forecastElement.getAttribute("queryTime");
+    itemArray.queryLocation = forecastElement.getAttribute("queryLocation");
+    itemArray.indexList = [];
+    var itemElements = forecastElement.getElementsByTagName("weather");
+    for(var i=0; i< itemElements.length; i++)
+    {
+      var item = {};
+      item.year = Number(itemElements[i].getElementsByTagName("year")[0].childNodes[0].nodeValue);
+      item.month = Number(itemElements[i].getElementsByTagName("month")[0].childNodes[0].nodeValue);
+      item.date = Number(itemElements[i].getElementsByTagName("date")[0].childNodes[0].nodeValue);
+      item.dayOfWeek = itemElements[i].getElementsByTagName("dayOfWeek")[0].childNodes[0].nodeValue;
+      item.overall = (itemElements[i].getElementsByTagName("overall")[0].childNodes[0].nodeValue);
+      item.overallCode = (itemElements[i].getElementsByTagName("overallCode")[0].childNodes[0].nodeValue);
+      item.highest = Number(itemElements[i].getElementsByTagName("highest")[0].childNodes[0].nodeValue);
+      item.lowest = Number(itemElements[i].getElementsByTagName("lowest")[0].childNodes[0].nodeValue);
+      itemArray.indexList.push(item);
+    }
+    return itemArray;
+  }
+
+  function displayForecast1(itemArray)
+  {
+    var html = "<h4>" + itemArray.queryLocation + " @ " + itemArray.queryTime + "</h4>";
+    html += "<table border='0'>";
+    for(var i=0; i<itemArray.indexList.length; i++)
+    {
+      html += "<tr>";
+      html += "<td align='center' width='150'><font class='day'>" + itemArray.indexList[i].dayOfWeek + "</font>&#160;";
+      html += itemArray.indexList[i].month + "/" + itemArray.indexList[i].date + "<br />";
+      html += "<img src ='" + itemArray.indexList[i].overallCode + ".png' width = '50px'/></td>";
+      html += "<td width='200'><font class='overall'>" + itemArray.indexList[i].overall + "</font><br />";
+      html += "<font class='hightemp'>" + itemArray.indexList[i].highest + "&#176;</font>";
+      html += "/<font class='lowtemp'>" + itemArray.indexList[i].lowest  + "&#176;</font></td>";
+      html += "</tr>";
+    }
+    html += "</table>";
+    html += "<br />";
+    var forecastDiv = document.getElementById("forecast1");
+    forecastDiv.innerHTML = html;
+  }
+
+  function displayForecast2(itemArray)
+  {
+    var html = "<h4>" + itemArray.queryLocation + " @ " + itemArray.queryTime + "</h4>";
+    html += "<table border='0' style='table-layout: fixed;'' width='750px'>";
+    html += "<tr>";
+    for(var i=0; i<itemArray.indexList.length; i++)
+    {
+      html += "<td width='150p' align='center'><font class='day'>" + itemArray.indexList[i].dayOfWeek + "</font>&#160;";
+      html += itemArray.indexList[i].month + "/" + itemArray.indexList[i].date + "</td>";
+    }
+    html += "</tr>";
+    html += "<tr>";
+    for(var i=0; i<itemArray.indexList.length; i++)
+    {
+      html += "<td align='center'><img src ='" + itemArray.indexList[i].overallCode + ".png' width = '50px'/></td>";
+    }
+    html += "</tr>";
+    html += "<tr>";
+    for(var i=0; i<itemArray.indexList.length; i++)
+    {
+      html += "<td align='center'><font class='hightemp'>" + itemArray.indexList[i].highest + "&#176;</font>";
+      html += "/<font class='lowtemp'>" + itemArray.indexList[i].lowest  + "&#176;</font></td>";
+
+    }
+    html += "</tr>";
+    html += "<tr>";
+    for(var i=0; i<itemArray.indexList.length; i++)
+    {
+      html += "<td align='center'><font class='overall'>" + itemArray.indexList[i].overall + "</font></td>";
+    }
+    html += "</tr>";
+    html += "</table>";
+    html += "<br />";
+    var forecastDiv = document.getElementById("forecast2");
+    forecastDiv.innerHTML = html;
+  }
+</script>
+<body>
+  <h1><b>Assignment 8 Solutuion</b></h1>
+  <hr />
+  <b>I have read the policy for plagiarism at Wollongong University.</b> <br />
+  <b>I declare that this assignment solution is enirely my work.</b> <br />
+  <hr />
+
+  <h1><b>Part 1</b></h1>
+  <table border="2" width="50%">
+    <tr>
+      <td colspan="2"><b>STUDENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT NUMBER</td>
+        <td>6212748</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT FAMILY NAME</td>
+        <td>LUR</td>
+    </tr>
+    <tr>
+      <td width="30%">STUDENT GIVEN NAME</td>
+        <td>BING HUII</td>
+    </tr>
+    <tr>
+      <td width="30%">UOW EMAIL</td>
+        <td>bhl736@uowmail.edu.au</td>
+    </tr>
+    <tr>
+      <td colspan="2"><b>ASSIGNMENT DETAILS</b></td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT CODE</td>
+        <td>CSIT128</td>
+    </tr>
+    <tr>
+      <td width="30%">SUBJECT NAME</td>
+        <td>Introduction to Web Technology</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT NUMBER</td>
+        <td>8</td>
+    </tr>
+    <tr>
+      <td width="30%">ASSIGNMENT DUE DATE</td>
+        <td>19/02/2019</td>
+    </tr>
+    <tr>
+      <td width="30%">LAB TIME</td>
+        <td>12:00</td>
+    </tr>
+  </table>
+  <hr />
+  <h1><b>Part 2</b></h1>
+  <button onClick="getForecast1()">Click here to view weather forecast 1</button>
+  <div id="forecast1"></div>
+  <hr />
+  <h1><b>Part 3</b></h1>
+  <button onClick="getForecast2()">Click here to view weather forecast 2</button>
+  <div id="forecast2"></div>
+  <hr />
+  &copy; Lur Bing Huii
+</body>
+</html>

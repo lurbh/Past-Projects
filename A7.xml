@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<forecast queryTime="22/07/2017 15:30:45" queryLocation="Whoville">
+  <weather yyyymmdd="20170727">
+    <year>2017</year>	
+    <month>7</month>
+    <date>27</date>
+    <dayOfWeek>THU</dayOfWeek> 
+    <overall>Considerable clouds</overall>
+    <overallCode>cloudy</overallCode>
+    <highest>18</highest>
+    <lowest>5</lowest>
+  </weather>
+  <weather yyyymmdd="20170726">
+    <year>2017</year>	
+    <month>7</month>
+    <date>26</date>
+    <dayOfWeek>WED</dayOfWeek> 
+    <overall>Cloudy with a thunderstorm</overall>
+    <overallCode>thunderstorm</overallCode>
+    <highest>15</highest>
+    <lowest>4</lowest>
+  </weather>
+  <weather yyyymmdd="20170725">
+    <year>2017</year>	
+    <month>7</month>
+    <date>25</date>
+    <dayOfWeek>TUE</dayOfWeek> 
+    <overall>A morning shower, then rain</overall>
+    <overallCode>rain</overallCode>
+    <highest>19</highest>
+    <lowest>10</lowest>
+  </weather>
+  <weather yyyymmdd="20170724">
+    <year>2017</year>	
+    <month>7</month>
+    <date>24</date>
+    <dayOfWeek>MON</dayOfWeek> 
+    <overall>Partly sunny</overall>
+    <overallCode>partlySunny</overallCode>
+    <highest>21</highest>
+    <lowest>10</lowest>
+  </weather>
+  <weather yyyymmdd="20170723">
+    <year>2017</year>	
+    <month>7</month>
+    <date>23</date>
+    <dayOfWeek>SUN</dayOfWeek> 
+    <overall>Plenty of sunshine</overall>
+    <overallCode>sunny</overallCode>
+    <highest>25</highest>
+    <lowest>11</lowest>
+  </weather>
+</forecast>
+
+
